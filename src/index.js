@@ -44,7 +44,7 @@ const firstPoint = async(item)=> {
 }
 
 firstPoint("Research Article")
-    .then(data=> console.log(data))
+    .then(data=> console.log('1. data: ', data))
 
 
 //2. Develop a function that prints by console all "author_display" with "score" greater than"6.0".○ Extra point, receive the value to be filtered by parameters.
@@ -57,7 +57,7 @@ const secondPoint = async(item)=> {
 }
 
 secondPoint(6)
-    .then(data => console.log(data))
+    .then(data => console.log('2. data: ', data))
 
 
 
@@ -74,7 +74,7 @@ const thirdPoint = async() => {
 }
 
 thirdPoint()
-    .then(data=> console.log(data))
+    .then(data=> console.log('3. data: ', data))
 
 
 //4.Develop a function that gets all the "article_type" without repeating and print it by console.
@@ -91,19 +91,58 @@ const fourthPoint = async () => {
 }
 
 fourthPoint()
-    .then(data=> console.log(data))
+    .then(data=> console.log('4. data: ', data))
 
 
 //5. Develop a function that concatenates all the "journal" and prints them by console. Extra point, print all the "journal" without repeating.
 
-// const fivethPoint =()=> {
-
-//     await getDataApi()
-
+const fifthPoint = async()=> {
+    await getDataApi()
 
 
+    const result = docs.map(item=> item.journal.toLowerCase());
 
-// }
+    const journalSet = Array.from(new Set(result));
 
-// firstPoint()
-//     .then(data=> console.log(data))
+    return journalSet.join(' ')
+}
+fifthPoint()
+    .then(data=> console.log('5. data: ', data))
+
+//6. Develop a function that removes a property of the array "docs" and prints the new array by console.
+
+const sixthPont = async()=>{
+    await getDataApi()
+
+    let deleteData = docs.map(item => {
+        return delete item.journal
+    })
+
+    console.log(deleteData);
+    return docs
+}
+
+sixthPont()
+    .then(data=> console.log('6.Se elimino journal', data))
+
+
+
+//7. Develop a function that prints by console only the records from id "10.1371/journal.pone.0047101" to "10.1371/journal.pgen.1000047".
+
+
+const seventhPoint = async()=> {
+    await getDataApi()
+    
+    // const records = docs.forEach(data => data.length >= 2 && data.length <= 6)
+    // return docs
+    
+    const [id0, id1, id2, id3, id4, id5, id6, id7, id8, id9] = docs
+    const records = [id2, id3, id4, id5, id6]
+    return records
+}
+
+seventhPoint()
+    .then(data => console.log(`7. Data records:`, data))
+
+
+//8. Develop a function that creates an array from the given "docs" and add the followingarray to it and print it to the console.

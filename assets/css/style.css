@@ -1,7 +1,26 @@
 
 *, html, body {
     font-family: 'Courier New', Courier, monospace;
+}
+
+h1{
+    color: rgb(50, 81, 233);
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+}
+
+
+h3{
+    text-align: center;
+    
+}
+
+.container{
+    
     height: 100vh;
-    margin: 0;
-    width: 100vw;
+    
+
 }
