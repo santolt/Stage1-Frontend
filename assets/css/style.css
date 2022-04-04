@@ -1,17 +1,21 @@
 
 *, html, body {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Lobster', cursive;
+    background: #FDC830;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F37335, #FDC830);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F37335, #FDC830); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 h1{
     color: rgb(50, 81, 233);
     text-align: center;
+
 }
 
 h2{
     text-align: center;
 }
-
 
 h3{
     text-align: center;
@@ -19,8 +23,9 @@ h3{
 }
 
 .container{
-    
-    height: 100vh;
-    
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
 }
