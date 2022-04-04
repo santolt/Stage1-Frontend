@@ -146,3 +146,55 @@ seventhPoint()
 
 
 //8. Develop a function that creates an array from the given "docs" and add the followingarray to it and print it to the console.
+
+
+const eighthPoint =  async() => {
+    await getDataApi()
+
+    const addData = docs.push(
+        {
+            id      : '10.1371/journal.pone.0177149',
+            journal : 'Wall Street',
+            eissn   : '1932-6203',
+            publication_date:'2017-05-03T00:00:00Z',
+            article_type:'Newspaper',
+            author_display:['Irina Bruck',
+                'Nalini Dhingra',
+                'Matthew P. Martinez',
+                'Daniel L. Kaplan'],
+                "abstract":['\nDpb11 is required for the initiation of DNA replication inbudding yeast. We found that Dpb11 binds tightly to single-stranded DNA(ssDNA) or branched DNA structures, while its human homolog, TopBP1, binds tightly to branched-DNA structures. We also found that Dpb11 binds stably to CDK-phosphorylated RPA, the eukaryotic ssDNA binding protein, in the presence of branched DNA. A Dpb11 mutant specifically defective for DNA binding did not exhibit tight binding to RPA in the presence of DNA, suggesting that Dpb11-interaction with DNA may promote the recruitment of RPA to melted DNA. We then characterized a mutant of Dpb11 that is specifically defective in DNA binding in budding yeast cells. Expression of dpb11-m1,2,3,5,ΔC results in a substantial decrease in RPA recruitment to origins, suggesting that Dpb11 interaction with DNA may be required for RPA recruitment to origins. Expression of dpb11-m1,2,3,5,ΔC also results in diminished GINS interaction with Mcm2-7 during S phase, while Cdc45 interaction with Mcm2-7 is like wild-type. The reduced GINS interaction with Mcm2-7 may be an indirect consequence of diminished origin melting. We propose that the tight interaction between Dpb11, CDK-phosphorylated RPA, and branched-DNA may be required for the essential function of stabilizing melted origin DNA in vivo. We also propose an alternative model, wherein Dpb11-DNA interaction is required for some other function in DNA replicationinitiation, such as helicase activation.\n'],
+
+            title_display:"Dpb11 may function with RPA and DNA to initiate DNAreplication",
+            id:'10.1371/journal.pgen.1006699',
+            publication_date:'2017-02-10T00:00:00Z',
+        }
+    )
+    console.log(addData);
+    return docs
+}
+
+eighthPoint()
+    .then(data => console.log('8. Data: ', data))
+
+
+const ninethPoint = async()=> {
+
+    await getDataApi()
+
+    let oddArray = []
+    // const filterOddArray = docs.map(items => items % 2 === 1)
+    // return oddArray.push(filterOddArray)
+
+    for(let i = 0; i < docs.length; i++){
+
+        if(i % 2 ===1){
+            
+            oddArray.push(docs[i])
+        }
+    }
+    return oddArray
+    
+}
+
+ninethPoint()
+    .then(data => console.log('9. data: ', data))
